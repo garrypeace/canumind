@@ -1,18 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { BackCard } from './components/BackCard';
+import { CardMeta } from './components/CardMeta';
+import { Controls } from './components/Controls';
+import { FrontCard } from './components/FrontCard';
+import { styles } from './styles/globalStyles';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>canumind</Text>
+      <FrontCard />
+      <BackCard />
+      <CardMeta />
+      <Controls />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
